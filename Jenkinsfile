@@ -30,7 +30,7 @@ pipeline {
   }
   stage('Build') {
    parallel {
-    stage('Compile') {
+    stage('Package') {
      agent {
       docker {
        image 'maven:3.6.0-jdk-8-alpine'
@@ -40,7 +40,7 @@ pipeline {
       }
      }
      steps {
-      sh ' mvn clean compile'
+      sh ' mvn clean package'
      }
     }
    }

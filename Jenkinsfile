@@ -66,7 +66,7 @@ stage('Build') {
     }
    }
   }
-  stage('Build') {
+  stage('Package') {
    parallel {
     stage('Package') {
      agent {

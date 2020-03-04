@@ -45,6 +45,7 @@ pipeline {
        pattern: '**/target/checkstyle-result.xml',
        unHealthy: '90',
            //useStableBuildAsReference: true
+         ]) 
        }
       }
      }   

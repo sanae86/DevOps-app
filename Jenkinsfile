@@ -28,6 +28,7 @@ pipeline {
     checkout scm
    }
   }
+   /*
   stage('CheckStyle') {
      agent {
       docker {
@@ -47,7 +48,9 @@ pipeline {
            //useStableBuildAsReference: true
          ]) 
        }
-      }
+      } 
+   */
+
   stage('Build') {
    parallel {
     stage('Package') {

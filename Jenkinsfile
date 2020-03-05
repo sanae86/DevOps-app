@@ -112,7 +112,6 @@ stage('Build') {
     }
    }
   }
-  stage('Code Quality Analysis') {
     stage('PMD') {
      agent {
       docker {
@@ -127,7 +126,6 @@ stage('Build') {
       step([$class: 'PmdPublisher', pattern: '**/target/pmd.xml'])
      }
     }
-  }
   stage('Package') {
    parallel {
     stage('Package') {
